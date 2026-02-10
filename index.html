@@ -174,7 +174,7 @@
   <div class="card">
     <div class="bigheart">❤️</div>
     <h1 class="title">Para <span id="name">Anabella</span> 💘</h1>
-    <p class="subtitle">Un mensaje cortito… pero con todo mi corazón.</p>
+    <p class="subtitle">Un mensaje cortito…</p>
 
     <div class="question">¿Quieres ser mi San Valentín?</div>
     <p class="msg" id="msg"></p>
@@ -188,9 +188,9 @@
   <div class="overlay" id="overlay">
     <div class="modal">
       <h2>AAAAA DIJO QUE SÍ 😭❤️</h2>
-      <p id="finalText">Me acabas de alegrar el día. Prometo cuidarte y darte muchos momentos bonitos 💝✨</p>
+      <p id="finalText">Me acabas de alegrar el día. Prometo dejar de ser asi de vergonzoso  💝✨</p>
       <button id="copy" style="background:#111;color:#fff;">Copiar mensaje para WhatsApp 📲</button>
-      <div class="mini">Tip: puedes mandarle captura del “Sí” o copiar el mensaje y enviarlo.</div>
+      <div class="mini">Espero que me perdones haber sido asi de frio estos dias pero no sabía como hablarte.</div>
     </div>
   </div>
 
@@ -204,10 +204,10 @@
 
   // 2) Mensajes tiernos rotativos
   const messages = [
-    `No sé si esto es muy directo… pero me encantas 🥺`,
+    `No sé si esto es muy cursi… pero me encantan tus ojos 🥺`,
     `Si dices que sí, te debo un plan bonito y una sonrisa tuya 💞`,
-    `Prometo que contigo el día 14 se siente especial ✨`,
-    `Vale… respiro… ahora dime que sí 😭❤️`,
+    `Prometo que dejar de ser tan serio jajaja ✨`,
+    `Vale… ahora dime que sí 😭❤️`,
   ];
   let mi = 0;
   const msgEl = document.getElementById("msg");
@@ -281,20 +281,14 @@
 
   yesBtn.addEventListener("click", () => {
     overlay.style.display = "flex";
-    finalText.textContent = `Anotado: ${NAME} es mi San Valentín 😭❤️
-Prometo plan bonito + detalles + muchas risas 💝✨`;
+    finalText.textContent = `Listo: ${NAME} eres mi San Valentín ❤️
+Prometo Tiramisu + peliculas + muchas risas + Me tienes que enseñar a bailar 💝✨`;
     spawnConfettiBurst();
   });
 
   copyBtn.addEventListener("click", async () => {
-    const text = `❤️ ${NAME} 🥺💘\n\n¿Quieres ser mi San Valentín?\n\nPrometo plan bonito + detalles + muchas risas 💝✨`;
-    try{
-      await navigator.clipboard.writeText(text);
-      copyBtn.textContent = "Copiado ✅";
-      setTimeout(()=>copyBtn.textContent="Copiar mensaje para WhatsApp 📲", 1800);
-    }catch{
-      alert("No se pudo copiar automáticamente. Selecciona y copia el texto manualmente.");
-    }
+    const text = `❤️ ${NAME} 🥺💘\n\n¿Quieres ser mi San Valentín?\n\nPrometo Tiramisu + peliculas + muchas risas + Me tienes que enseñar a bailar 💝✨`;
+    
   });
 </script>
 </body>
